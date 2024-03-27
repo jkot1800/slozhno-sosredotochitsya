@@ -1,5 +1,48 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  font-family: 'IBM Plex mono', sans-serif;
+  padding: 3%;
+  font-size: 18px;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+}
+/* header */
+.header {
+  
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11.5px;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: transparent;
+  color: var(--accent-color);
+}
+
+.decorated-zone {
+  background-image: var(--bg-image);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* Header title style */
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); /* переменная? */
+  line-height: 82.5%;
+  color: var(--main-title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.title-decor {
+  display: block;
+  color: var(--sub-title-color);
+  background-color: var(--accent-color);
+  font-weight: bold;
+  line-height: 23.4px;
 }
