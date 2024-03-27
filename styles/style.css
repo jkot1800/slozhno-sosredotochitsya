@@ -1,20 +1,29 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  font-family: 'IBM Plex mono', sans-serif;
-  padding: 3%;
+  font-family: "IBM Plex mono", sans-serif;
+  background-image: var(--bg-image);
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
   font-size: 18px;
+  color: var(--text-color);
+
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 /* header */
 .header {
-  
+  display: flex;
+  flex-direction: column;
+  gap: 274.5px;
+  padding: 20px;
+  border: 1px solid red;
 }
 
 .header__theme-menu-list {
   display: flex;
-  flex-direction: column;
-  gap: 11.5px;
+  gap: 23px;
+  justify-content: center;
 }
 
 .header__theme-menu-button {
@@ -23,24 +32,26 @@
   color: var(--accent-color);
 }
 
-.decorated-zone {
-  background-image: var(--bg-image);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-
 /* Header title style */
 
+.header__title-box {
+  display: flex;
+  flex-direction: column;
+  gap: 114px;
+}
+
 .header__title {
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); /* переменная? */
+  position: relative;
+  right: 20px;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); /* переменная? */
   line-height: 82.5%;
   color: var(--main-title-color);
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 .title-decor {
-  display: block;
+  width: 491px;
+  align-self: flex-end;
   color: var(--sub-title-color);
   background-color: var(--accent-color);
   font-weight: bold;
