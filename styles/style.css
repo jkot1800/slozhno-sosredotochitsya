@@ -2,28 +2,28 @@
 
 .page {
   font-family: "IBM Plex mono", sans-serif;
+  /*
   background-image: var(--bg-image);
-  background-position: top center;
+  background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  */
+  padding: 20px;
   font-size: 18px;
   color: var(--text-color);
 
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
-/* header */
-.header {
+/* HEADER */
+.header__theme-menu {
   display: flex;
-  flex-direction: column;
-  gap: 274.5px;
-  padding: 20px;
-  border: 1px solid red;
+  justify-content: center;
 }
 
 .header__theme-menu-list {
   display: flex;
+  width: fit-content;
   gap: 23px;
-  justify-content: center;
 }
 
 .header__theme-menu-button {
@@ -31,10 +31,47 @@
   border: transparent;
   color: var(--accent-color);
 }
+/* Header top and bottom decor elements */
+/* top decor */
+.header__top-decor-element {
+  display: flex;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  color: var(--accent-color);
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+}
 
+.header__top-decor-element::before {
+  content: "";
+  margin: auto;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
+}
+
+.header__top-decor-element-rec {
+  position: absolute;
+  text-transform: uppercase;
+  right: 27px;
+}
+/* Bottom decor */
+.header__bottom-decor-element {
+  margin-block-start: 89px;
+  width: 25px;
+  height: 25px;
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
+}
 /* Header title style */
 
 .header__title-box {
+  margin-block-start: 274.5px;
   display: flex;
   flex-direction: column;
   gap: 114px;
@@ -57,3 +94,34 @@
   font-weight: bold;
   line-height: 23.4px;
 }
+
+/* header media */
+/* Для планшетов */
+@media (width < 1024px) {
+  .header__theme-menu {
+    justify-content: flex-end;
+  }
+  
+  .header__theme-menu-list {
+    margin-block-start: 172px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .header__title-box {
+    margin-block-start: 174.5px;
+    gap: 162px;
+  }
+
+  .title-decor {
+    width: 364px;
+  }
+
+  .header__bottom-decor-element {
+    margin-block-start: 138px;
+  }
+}
+
+/* Для мобильных */
+
+/* End of HEADER */
