@@ -17,33 +17,35 @@
   </head>
   <body class="page">
     <header class="header decorated-zone">
-      <div class="header__top-decor-element" aria-hidden="true"><span class="header__top-decor-element-rec" aria-hidden="true">rec</span></div>
-      <nav class="header__theme-menu">
-        <ul class="header__theme-menu-list">
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_type_light"
-            >
-              День
-            </button>
-          </li>
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
-              disabled
-            >
-              Авто
-            </button>
-          </li>
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_type_dark"
-            >
-              Неон
-            </button>
-          </li>
-        </ul>
-      </nav>
+      <div class="header__top-box">
+        <nav class="header__theme-menu">
+          <ul class="header__theme-menu-list">
+            <li class="header__theme-menu-item">
+              <button
+                class="header__theme-menu-button header__theme-menu-button_type_light"
+              >
+                День
+              </button>
+            </li>
+            <li class="header__theme-menu-item">
+              <button
+                class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
+                disabled
+              >
+                Авто
+              </button>
+            </li>
+            <li class="header__theme-menu-item">
+              <button
+                class="header__theme-menu-button header__theme-menu-button_type_dark"
+              >
+                Неон
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__top-box-decorative-element"><span></span></div>
+      </div>
       <div class="header__title-box">
         <h1 class="header__title">no focus</h1>
         <p class="title-decor">
@@ -52,7 +54,7 @@
           надо
         </p>
       </div>
-     <div class="header__bottom-decor-element" aria-hidden="true"></div>
+      <div class="header__bottom-decorative-element"></div>
     </header>
     <script src="./scripts/script.js"></script>
   </body>

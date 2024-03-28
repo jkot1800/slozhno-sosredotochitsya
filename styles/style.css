@@ -2,12 +2,10 @@
 
 .page {
   font-family: "IBM Plex mono", sans-serif;
-  /*
   background-image: var(--bg-image);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  */
   padding: 20px;
   font-size: 18px;
   color: var(--text-color);
@@ -15,99 +13,116 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 /* HEADER */
+/* First Row */
+.header__top-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .header__theme-menu {
-  display: flex;
-  justify-content: center;
+  grid-column: 2;
+  justify-self: center;
 }
 
 .header__theme-menu-list {
   display: flex;
-  width: fit-content;
   gap: 23px;
 }
 
 .header__theme-menu-button {
+  border: none;
   background-color: transparent;
-  border: transparent;
   color: var(--accent-color);
-}
-/* Header top and bottom decor elements */
-/* top decor */
-.header__top-decor-element {
-  display: flex;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 25px;
-  height: 25px;
-  color: var(--accent-color);
-  border-block-start: 1px solid var(--accent-color);
-  border-inline-end: 1px solid var(--accent-color);
 }
 
-.header__top-decor-element::before {
-  content: "";
+.header__top-box-decorative-element {
+  grid-column: 3;
+  justify-self: end;
+  display: flex;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border-inline-end: var(--decorative-element-border);
+  border-block-start: var(--decorative-element-border);
+}
+
+.header__top-box-decorative-element span {
+  display: block;
   margin: auto;
   width: 9px;
   height: 9px;
-  border-radius: 50%;
   background-color: var(--accent-color);
+  border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--accent-color);
 }
 
-.header__top-decor-element-rec {
+.header__top-box-decorative-element::before {
+  content: "rec";
   position: absolute;
-  text-transform: uppercase;
   right: 27px;
+  text-transform: uppercase;
+  color: var(--accent-color);
 }
-/* Bottom decor */
-.header__bottom-decor-element {
-  margin-block-start: 89px;
-  width: 25px;
-  height: 25px;
-  border-inline-start: 1px solid var(--accent-color);
-  border-block-end: 1px solid var(--accent-color);
-}
-/* Header title style */
 
+/* Second Row */
 .header__title-box {
   margin-block-start: 274.5px;
   display: flex;
   flex-direction: column;
   gap: 114px;
 }
-
 .header__title {
   position: relative;
   right: 20px;
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); /* переменная? */
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   line-height: 82.5%;
   color: var(--main-title-color);
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 4px 4px var(--accent-color);
 }
 
 .title-decor {
   width: 491px;
   align-self: flex-end;
-  color: var(--sub-title-color);
   background-color: var(--accent-color);
-  font-weight: bold;
+  color: var(--sub-title-color);
   line-height: 23.4px;
+  font-weight: bold;
 }
 
-/* header media */
-/* Для планшетов */
+/* Third Row */
+.header__bottom-decorative-element {
+  margin-block-start: 89px;
+  width: 25px;
+  height: 25px;
+  border-inline-start: var(--decorative-element-border);
+  border-block-end: var(--decorative-element-border);
+}
+
+/* Планшеты */
 @media (width < 1024px) {
-  .header__theme-menu {
-    justify-content: flex-end;
+  /* First Row */
+  .header__top-box {
+    grid-template-rows: repeat(2, auto);
+    row-gap: 146px;
   }
-  
+
+  .header__theme-menu {
+    grid-column: 3;
+    grid-row: 2;
+    justify-self: end;
+  }
+
   .header__theme-menu-list {
-    margin-block-start: 172px;
+    display: flex;
     flex-direction: column;
     gap: 10px;
   }
-  
+
+  .header__top-box-decorative-element {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  /* Second Row */
   .header__title-box {
     margin-block-start: 174.5px;
     gap: 162px;
@@ -115,13 +130,18 @@
 
   .title-decor {
     width: 364px;
+    align-self: flex-end;
+    background-color: var(--accent-color);
+    color: var(--sub-title-color);
+    line-height: 23.4px;
+    font-weight: bold;
   }
 
-  .header__bottom-decor-element {
+  /* Third Row */
+  .header__bottom-decorative-element {
     margin-block-start: 138px;
   }
 }
 
-/* Для мобильных */
-
+/* Смартфоны */
 /* End of HEADER */
