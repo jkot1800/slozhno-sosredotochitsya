@@ -2,10 +2,12 @@
 
 .page {
   font-family: "IBM Plex mono", sans-serif;
+  /*
   background-image: var(--bg-image);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  */
   padding: 20px;
   font-size: 18px;
   color: var(--text-color);
@@ -80,9 +82,12 @@
   text-shadow: 4px 4px var(--accent-color);
 }
 
-.title-decor {
-  width: 491px;
+.header__title-paragraph {
+  width: 50%;
   align-self: flex-end;
+}
+
+.title-decor {
   background-color: var(--accent-color);
   color: var(--sub-title-color);
   line-height: 23.4px;
@@ -128,15 +133,6 @@
     gap: 162px;
   }
 
-  .title-decor {
-    width: 364px;
-    align-self: flex-end;
-    background-color: var(--accent-color);
-    color: var(--sub-title-color);
-    line-height: 23.4px;
-    font-weight: bold;
-  }
-
   /* Third Row */
   .header__bottom-decorative-element {
     margin-block-start: 138px;
@@ -144,4 +140,84 @@
 }
 
 /* Смартфоны */
+@media (width < 768px) {
+  .page {
+    padding: 10px;
+  }
+  /* first row */
+
+  .header__top-box {
+    row-gap: 39px;
+  }
+  /*second row */
+
+  .header__title-box {
+    margin-block-start: 66.5px;
+    gap: 55px;
+  }
+
+  .header__title {
+    position: static;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+
+  .header__title-paragraph {
+    width: 100%;
+  }
+
+  /* Third Row */
+  .header__bottom-decorative-element {
+    margin-block-start: 31px;
+  }
+}
+
 /* End of HEADER */
+
+/* MAIN */
+.main {
+  margin-block-start: 80px;
+}
+
+/* first section */
+
+.section {
+  display: flex;
+}
+
+.section__title {
+  color: var(--accent-color);
+  font-size: 18px;
+  line-height: 23.4px;
+}
+
+.section__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 70%;
+}
+
+.section__list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section__list-item-title {
+  width: 100%;
+  font-size: 18px;
+}
+
+.section__list-item-paragraph {
+  line-height: 23.4px;
+}
+
+.section__list-item-paragraph a {
+  text-decoration: none;
+  text-shadow: 2px 2px var(--accent-color);
+}
+
+/* end of first section */
+
+/* second section */
+/* End of Main */
