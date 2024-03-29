@@ -182,19 +182,21 @@
 
 .section {
   display: flex;
+  justify-content: space-between;
 }
 
 .section__title {
+  width: 32.008%;
   color: var(--accent-color);
   font-size: 18px;
   line-height: 23.4px;
 }
 
 .section__list {
+  width: 65.947%;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 70%;
 }
 
 .section__list-item {
@@ -215,6 +217,37 @@
 .section__list-item-paragraph a {
   text-decoration: none;
   text-shadow: 2px 2px var(--accent-color);
+}
+
+/* Планшеты */
+@media (width < 1024px) {
+  .section__title {
+    width: 32.417%;
+  }
+
+  .section__list {
+    width: 64.835%;
+  }
+}
+
+/* Смартфоны  */
+@media (width < 768px) {
+  .main {
+    margin-block-start: 50px;
+  }
+
+  .section {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .section__title {
+    width: 100%;
+  }
+
+  .section__list {
+    width: 100%;
+  }
 }
 
 /* end of first section */
