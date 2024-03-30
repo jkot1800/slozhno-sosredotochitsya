@@ -92,6 +92,7 @@
   color: var(--sub-title-color);
   line-height: 23.4px;
   font-weight: bold;
+  font-size: 18px;
 }
 
 /* Third Row */
@@ -187,6 +188,9 @@
 
 .section__title {
   width: 32.008%;
+}
+
+.section__title-decor {
   color: var(--accent-color);
   font-size: 18px;
   line-height: 23.4px;
@@ -253,4 +257,113 @@
 /* end of first section */
 
 /* second section */
+.sectioon__decreased-concentration {
+  margin-block-start: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sectioon__decreased-concentration-title {
+  width: calc((100% - 40px) / 3);
+}
+
+.sectioon__decreased-concentration-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sectioon__decreased-concentration-list-item {
+  width: calc((100% - 40px) / 3);
+}
+
+/* Планшеты */
+@media (width < 1024px) {
+  .sectioon__decreased-concentration-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .sectioon__decreased-concentration-list-item {
+    width: 100%;
+  }
+}
+
+/* Смартфоны */
+@media (width < 768px) {
+  .sectioon__decreased-concentration {
+    margin-block-start: 50px;
+  }
+  .sectioon__decreased-concentration-title {
+    width: 100%;
+  }
+}
+/* end of second section */
+
+/* Third section */
+.section__better-concetnration {
+  margin-block-start: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section__better-concetnration-title {
+  width: 32.012%;
+}
+
+.section__better-concetnration-box {
+  width: 65.807%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section__better-concetnration-box-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section__better-concetnration-box-list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section__better-concetnration-box-list-item-header-paragraph {
+  background-color: var(--accent-color);
+  color: var(--sub-title-color);
+  line-height: 23.4px;
+  font-size: 18px;
+}
+
+/* Планшеты */
+@media (width < 1024px) {
+  .section__better-concetnration-title {
+    width: 32.417%;
+  }
+
+  .section__better-concetnration-box {
+    width: 64.835%;
+  }
+}
+/* Смартфоны */
+@media (width < 768px) {
+  .section__better-concetnration {
+    margin-block-start: 50px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .section__better-concetnration-title {
+    width: 100%;
+  }
+
+  .section__better-concetnration-box {
+    width: 100%;
+  }
+}
+
+/* End of third section */
+
 /* End of Main */
