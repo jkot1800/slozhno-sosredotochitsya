@@ -44,7 +44,7 @@
             </li>
           </ul>
         </nav>
-        <div class="header__top-box-decorative-element"><span></span></div>
+        <div class="header__top-box-decorative-element" aria-hidden="true"><span></span></div>
       </div>
       <div class="header__title-box">
         <h1 class="header__title">no focus</h1>
@@ -54,7 +54,7 @@
           надо
         </p>
       </div>
-      <div class="header__bottom-decorative-element"></div>
+      <div class="header__bottom-decorative-element decorative__element" aria-hidden="true"></div>
     </header>
 
     <main class="main">
@@ -217,12 +217,15 @@
                 class="section__better-concetnration-box-list-item-bottom-paragraph section__list-item-paragraph"
               >
                 Или даже пробегитесь. Лучше найти парк или лес: один эксперимент
-                показал, что созерцание природы повышает концентрацию, в то
-                время как после просмотра городских пейзажей она наоборот
-                понижается. Можно совместить прогулку с физическими упражнениями
-                или бегом — так в мозг поступит ещё больше кислорода и он будет
-                лучше работать. Но и простая двадцатиминутная прогулка — тоже
-                отличный вариант.
+                <a
+                  href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328"
+                  >показал</a
+                >, что созерцание природы повышает концентрацию, в то время как
+                после просмотра городских пейзажей она наоборот понижается.
+                Можно совместить прогулку с физическими упражнениями или бегом —
+                так в мозг поступит ещё больше кислорода и он будет лучше
+                работать. Но и простая двадцатиминутная прогулка — тоже отличный
+                вариант.
               </p>
             </li>
             <li class="section__better-concetnration-box-list-item">
@@ -259,7 +262,49 @@
           </ul>
         </div>
       </section>
+      <section class="section__pictures">
+        <h2 class="section__pictures-title title-decor">
+          А можно в картинках?
+        </h2>
+        <div class="section__pictures-pictures-box">
+          <img
+            src="./images/sunset.png"
+            alt="Закат"
+            class="section__pictures-pictures-box-img"
+            loading="lazy"
+          />
+          <img
+            src="./images/ice-cream.png"
+            alt="Мороженное"
+            class="section__pictures-pictures-box-img"
+            loading="lazy"
+          />
+          <img
+            src="./images/tape.png"
+            alt="Кассета"
+            class="section__pictures-pictures-box-img"
+            loading="lazy"
+          />
+          <img
+            src="./images/books.png"
+            alt="Книги"
+            class="section__pictures-pictures-box-img"
+            loading="lazy"
+          />
+          <img
+            src="./images/street.png"
+            alt="Улица"
+            class="section__pictures-pictures-box-img"
+            loading="lazy"
+          />
+        </div>
+      </section>
     </main>
+    <footer class="footer">
+      <div class="footer__top-decorative decorative__element" aria-hidden="true"></div>
+      <h2 class="footer__title">focus</h2>
+      <div class="footer__bottom-decorative decorative__element" aria-hidden="true"></div>
+    </footer>
 
     <script src="./scripts/script.js"></script>
   </body>

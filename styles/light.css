@@ -5,8 +5,18 @@
 */
 
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --main-title-color: rgba(255, 194, 230, 1);
+  --sub-title-color: rgba(53, 52, 48, 1);
+  --text-color: rgba(53, 52, 48, 1);
+  --accent-color: rgba(255, 141, 203, 1);
+  --section-title-color: rgba(53, 52, 48, 1);
+  --bg-image: url(../images/cover-image-light.png);
+  --decorative-element-border: 1px solid var(--section-title-color);
+  --opacity-for-rec-circle: 0;
 }
+
+
+
+
+
+
