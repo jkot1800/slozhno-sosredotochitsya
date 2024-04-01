@@ -6,13 +6,16 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  padding: 20px;
   font-size: 18px;
   color: var(--text-color);
 
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 /* HEADER */
+.decorated-zone {
+  margin-block-start: 20px;
+  padding: 0 20px;
+}
 /* First Row */
 .header__top-box {
   display: grid;
@@ -161,8 +164,9 @@
 
 /* Смартфоны */
 @media (width < 768px) {
-  .page {
-    padding: 10px;
+  .decorated-zone {
+    margin-block-start: 10px;
+    padding: 0 10px;
   }
   /* first row */
 
@@ -196,6 +200,7 @@
 /* MAIN */
 .main {
   margin-block-start: 80px;
+  padding: 0 20px;
 }
 
 /* first section */
@@ -245,7 +250,7 @@
 /* Эффект HOVER и Focus для ссылки */
 
 .section__list-item-paragraph a:hover {
-  text-decoration: underline;
+  border-block-end: 1px solid var(--text-color);
 }
 
 .section__list-item-paragraph a:focus {
@@ -268,6 +273,7 @@
 @media (width < 768px) {
   .main {
     margin-block-start: 50px;
+    padding: 0 10px;
   }
 
   .section {
@@ -342,7 +348,7 @@
 }
 
 .section__better-concetnration-box {
-  width: 65.807%;
+  width: 65.955%;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -497,9 +503,10 @@
 /* Footer */
 .footer {
   margin-block-start: 80px;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
-  gap: 274px;
+  gap: 275px;
 }
 
 .footer__top-decorative {
@@ -529,6 +536,7 @@
 @media (width < 768px) {
   .footer {
     margin-block-start: 50px;
+    padding: 0 10px;
     gap: 251px;
   }
 
