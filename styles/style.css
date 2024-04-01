@@ -12,20 +12,17 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 /* HEADER */
-.decorated-zone {
-  margin-block-start: 20px;
-  padding: 0 20px;
+.header {
+  position: relative;
   height: 100vh;
-}
-/* First Row */
-.header__top-box {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .header__theme-menu {
-  grid-column: 2;
   justify-self: center;
+  margin-top: 20px;
 }
 
 .header__theme-menu-list {
@@ -39,56 +36,20 @@
   color: var(--section-title-color);
 }
 
-.header__top-box-decorative-element {
-  grid-column: 3;
-  justify-self: end;
-  display: flex;
-  position: relative;
-  width: 25px;
-  height: 25px;
-  border-inline-end: var(--decorative-element-border);
-  border-block-start: var(--decorative-element-border);
-}
-
-.header__top-box-decorative-element span {
-  display: block;
-  margin: auto;
-  width: 9px;
-  height: 9px;
-  background-color: var(--accent-color);
-  border-radius: 50%;
-  box-shadow: 0 0 4px 2px var(--accent-color);
-  opacity: var(--opacity-for-rec-circle);
-}
-
-.header__top-box-decorative-element::before {
-  content: "rec";
-  position: absolute;
-  right: 27px;
-  text-transform: uppercase;
-  color: var(--accent-color);
-  opacity: var(--opacity-for-rec-circle);
-}
-
-/* Second Row */
-.header__title-box {
-  margin-block-start: 274.5px;
-  display: flex;
-  flex-direction: column;
-  gap: 114px;
-}
 .header__title {
-  position: relative;
-  right: 20px;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  line-height: 82.5%;
   color: var(--main-title-color);
+  line-height: 82.5%;
   text-shadow: 4px 4px var(--accent-color);
+  align-self: center;
 }
 
-.header__title-paragraph {
-  width: 50%;
-  align-self: flex-end;
+.header__paragraph {
+  height: fit-content;
+  width: calc(50% - 21px);
+  justify-self: end;
+  margin-block-start: 51px;
+  margin-inline-end: 20px;
 }
 
 .title-decor {
@@ -97,18 +58,6 @@
   line-height: 23.4px;
   font-weight: bold;
   font-size: 18px;
-}
-
-/* Third Row */
-.header__bottom-decorative-element {
-  margin-block-start: 89px;
-}
-/* Стили декоративного квадрата с двумя границами */
-.decorative__element {
-  width: 25px;
-  height: 25px;
-  border-inline-start: var(--decorative-element-border);
-  border-block-end: var(--decorative-element-border);
 }
 
 /* Стили активной кнопки, стили при наведении и фокусе */
@@ -127,72 +76,97 @@
   border-block-end: 1px solid var(--section-title-color);
 }
 
+/* Decorative elements */
+.header__top-decorative-element {
+  position: absolute;
+  display: flex;
+  width: 25px;
+  height: 25px;
+  top: 20px;
+  right: 20px;
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+}
+
+.header__top-decorative-element::before {
+  content: "";
+  display: block;
+  margin: auto;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  opacity: var(--opacity-for-rec-circle);
+}
+
+.header__top-decorative-element span {
+  position: absolute;
+  display: block;
+  right: 27px;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  opacity: var(--opacity-for-rec-circle);
+}
+
+.header__bottom-decorative-element {
+  position: absolute;
+  display: flex;
+  width: 25px;
+  height: 25px;
+  bottom: 20px;
+  left: 20px;
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
+}
+
 /* Планшеты */
 @media (width < 1024px) {
-  /* First Row */
-  .header__top-box {
-    grid-template-rows: repeat(2, auto);
-    row-gap: 146px;
-  }
-
   .header__theme-menu {
-    grid-column: 3;
-    grid-row: 2;
     justify-self: end;
+    align-self: end;
+    margin: 0 23px 53px;
   }
 
   .header__theme-menu-list {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 11.5px;
   }
 
-  .header__top-box-decorative-element {
-    grid-column: 3;
-    grid-row: 1;
-  }
-  /* Second Row */
-  .header__title-box {
-    margin-block-start: 174.5px;
-    gap: 162px;
-  }
-
-  /* Third Row */
-  .header__bottom-decorative-element {
-    margin-block-start: 138px;
+  .header__paragraph {
+    margin-block-start: 40px;
   }
 }
 
-/* Смартфоны */
+/* смартфоны */
 @media (width < 768px) {
-  .decorated-zone {
-    margin-block-start: 10px;
-    padding: 0 10px;
-  }
-  /* first row */
-
-  .header__top-box {
-    row-gap: 39px;
-  }
-  /*second row */
-
-  .header__title-box {
-    margin-block-start: 66.5px;
-    gap: 55px;
+  .header__theme-menu {
+    justify-self: end;
+    align-self: end;
+    margin: 0 15px 53px;
   }
 
   .header__title {
-    position: static;
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    margin-inline-start: 10px;
+  }
+  .header__paragraph {
+    height: fit-content;
+    width: calc(100% - 20px);
+    justify-self: start;
+    margin: 40px auto auto auto;
   }
 
-  .header__title-paragraph {
-    width: 100%;
+  /* Decorative elements */
+  .header__top-decorative-element {
+    top: 10px;
+    right: 10px;
   }
 
-  /* Third Row */
   .header__bottom-decorative-element {
-    margin-block-start: 31px;
+    bottom: 10px;
+    left: 10px;
   }
 }
 
@@ -200,7 +174,7 @@
 
 /* MAIN */
 .main {
-  margin-block-start: 40px;
+  margin-block-start: 60px;
   padding: 0 20px;
 }
 
@@ -273,7 +247,7 @@
 /* Смартфоны  */
 @media (width < 768px) {
   .main {
-    margin-block-start: 30px;
+    margin-block-start: 40px;
     padding: 0 10px;
   }
 
@@ -503,43 +477,49 @@
 
 /* Footer */
 .footer {
+  position: relative;
   height: 100vh;
-  margin-block-start: 80px;
+  margin-block-start: 60px;
   padding: 0 20px;
   display: flex;
-  flex-direction: column;
-  gap: 275px;
+  
 }
 
-.footer__top-decorative {
-  align-self: flex-end;
-  transform: rotate(180deg);
+.footer__top-decorative-element {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 20px;
+  right: 20px;
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+  
 }
 
 .footer__title {
-  align-self: center;
+  margin: auto;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   line-height: 82.5%;
   color: var(--main-title-color);
   text-shadow: 2px 2px var(--accent-color);
 }
 
-.footer__bottom-decorative {
-  align-self: flex-start;
-}
-
 /* Планшеты */
-@media (width < 1024px) {
-  .footer {
-    gap: 418px;
-  }
-}
+
 /* Смартфоны */
 @media (width < 768px) {
   .footer {
-    margin-block-start: 50px;
+    position: relative;
+    height: 100vh;
+    margin-block-start: 40px;
     padding: 0 10px;
-    gap: 251px;
+    display: flex;
+    
+  }
+
+  .footer__top-decorative-element {
+    top: 10px;
+    right: 10px;
   }
 
   .footer__title {
