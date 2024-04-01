@@ -107,6 +107,22 @@
   border-block-end: var(--decorative-element-border);
 }
 
+/* Стили активной кнопки, стили при наведении и фокусе */
+.header__theme-menu-button_active {
+  pointer-events: none;
+  border: 1px solid var(--section-title-color);
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--section-title-color);
+  cursor: pointer;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+  border-block-end: 1px solid var(--section-title-color);
+}
+
 /* Планшеты */
 @media (width < 1024px) {
   /* First Row */
@@ -224,6 +240,17 @@
 .section__list-item-paragraph a {
   text-decoration: none;
   text-shadow: 2px 2px var(--accent-color);
+}
+
+/* Эффект HOVER и Focus для ссылки */
+
+.section__list-item-paragraph a:hover {
+  text-decoration: underline;
+}
+
+.section__list-item-paragraph a:focus {
+  outline: 1px solid var(--text-color);
+  outline-offset: -1px;
 }
 
 /* Планшеты */
