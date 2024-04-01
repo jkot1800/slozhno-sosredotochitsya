@@ -200,7 +200,7 @@
 
 /* MAIN */
 .main {
-  margin-block-start: 80px;
+  margin-block-start: 40px;
   padding: 0 20px;
 }
 
@@ -261,6 +261,7 @@
 
 /* Планшеты */
 @media (width < 1024px) {
+
   .section__title {
     width: 32.417%;
   }
@@ -273,7 +274,6 @@
 /* Смартфоны  */
 @media (width < 768px) {
   .main {
-    margin-block-start: 50px;
     padding: 0 10px;
   }
 
