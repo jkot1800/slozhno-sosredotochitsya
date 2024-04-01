@@ -274,6 +274,7 @@
 /* Смартфоны  */
 @media (width < 768px) {
   .main {
+    margin-block-start: 30px;
     padding: 0 10px;
   }
 
