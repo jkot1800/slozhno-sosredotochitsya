@@ -3,7 +3,8 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root.theme_dark {
+
+.page.theme_dark {
   --main-title-color: rgb(219, 0, 255);
   --sub-title-color: rgba(0, 0, 40, 1);
   --text-color: rgba(241, 178, 206, 1);
@@ -25,15 +26,4 @@
     --decorative-element-border: 1px solid var(--accent-color);
     --opacity-for-rec-circle: 1;
   }
-}
-
-.page.theme_dark {
-  --main-title-color: rgb(219, 0, 255);
-  --sub-title-color: rgba(0, 0, 40, 1);
-  --text-color: rgba(241, 178, 206, 1);
-  --accent-color: rgba(255, 0, 112, 1);
-  --section-title-color: var(--accent-color);
-  --bg-image: url(../images/cover-image-dark.png);
-  --decorative-element-border: 1px solid var(--accent-color);
-  --opacity-for-rec-circle: 1;
 }
