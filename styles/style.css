@@ -261,7 +261,6 @@
 
 /* Планшеты */
 @media (width < 1024px) {
-
   .section__title {
     width: 32.417%;
   }
