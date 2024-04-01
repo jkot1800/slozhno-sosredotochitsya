@@ -15,6 +15,7 @@
 .decorated-zone {
   margin-block-start: 20px;
   padding: 0 20px;
+  height: 100vh;
 }
 /* First Row */
 .header__top-box {
@@ -502,6 +503,7 @@
 
 /* Footer */
 .footer {
+  height: 100vh;
   margin-block-start: 80px;
   padding: 0 20px;
   display: flex;
