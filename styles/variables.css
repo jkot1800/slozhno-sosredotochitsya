@@ -8,7 +8,7 @@
   --text-color: rgba(241, 178, 206, 1);
   --accent-color: rgba(255, 0, 112, 1);
   --section-title-color: var(--accent-color);
-  --bg-image: url(./images/cover-image-dark.png);
+  --bg-image: url(../images/cover-image-dark.png);
   --decorative-element-border: 1px solid var(--accent-color);
   --opacity-for-rec-circle: 1;
 }

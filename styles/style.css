@@ -3,7 +3,7 @@
 .page {
   font-family: "IBM Plex mono", sans-serif;
   background-image: var(--bg-image);
-  background-position: center;
+  background-position: top center;
   background-size: cover;
   background-attachment: fixed;
   font-size: 18px;
