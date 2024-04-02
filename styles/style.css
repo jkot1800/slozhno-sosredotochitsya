@@ -64,14 +64,20 @@
 .header__theme-menu-button_active {
   pointer-events: none;
   border: 1px solid var(--section-title-color);
+  padding: 1.5px 13px;
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--section-title-color);
+  border: 1px solid var(--border-hover-color);
   cursor: pointer;
+  padding: 1.5px 13px;
 }
 
 .header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
   outline: none;
   border-block-end: 1px solid var(--section-title-color);
 }
@@ -227,6 +233,10 @@
 }
 
 .section__list-item-paragraph a:focus {
+  outline: none;
+}
+
+.section__list-item-paragraph a:focus-visible {
   outline: 1px solid var(--text-color);
   outline-offset: -1px;
 }

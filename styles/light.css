@@ -14,6 +14,7 @@
   --bg-image: url(../images/cover-image-light.png);
   --decorative-element-border: 1px solid var(--section-title-color);
   --display-decorative-element: none;
+  --border-hover-color: rgb(53 52 48 / 0.4);
 }
 
 @media (prefers-color-scheme: light) {
@@ -27,5 +28,6 @@
     --bg-image: url(../images/cover-image-light.png);
     --decorative-element-border: 1px solid var(--section-title-color);
     --display-decorative-element: none;
+    --border-hover-color: rgb(53 52 48 / 0.4);
   }
 }

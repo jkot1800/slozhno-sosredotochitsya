@@ -12,6 +12,7 @@
   --bg-image: url(../images/cover-image-dark.png);
   --decorative-element-border: 1px solid var(--accent-color);
   --display-decorative-element: block;
+  --border-hover-color: rgb(255 0 112 / 0.4);
 }
 
 
