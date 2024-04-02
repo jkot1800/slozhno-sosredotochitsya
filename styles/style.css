@@ -1,5 +1,4 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   font-family: "IBM Plex mono", sans-serif;
   background-color:  var( --bg-color);
@@ -345,6 +344,7 @@
   color: var(--sub-title-color);
   line-height: 23.4px;
   font-size: 18px;
+  font-weight: normal;
 }
 
 /* Планшеты */
