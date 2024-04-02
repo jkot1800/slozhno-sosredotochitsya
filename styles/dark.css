@@ -12,7 +12,7 @@
   --section-title-color: var(--accent-color);
   --bg-image: url(../images/cover-image-dark.png);
   --decorative-element-border: 1px solid var(--accent-color);
-  --opacity-for-rec-circle: 1;
+  --display-decorative-element: block;
 }
 
 
