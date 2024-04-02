@@ -10,6 +10,7 @@
   --text-color: rgba(53, 52, 48, 1);
   --accent-color: rgba(255, 141, 203, 1);
   --section-title-color: rgba(53, 52, 48, 1);
+  --bg-color: rgba(241, 178, 206, 1);
   --bg-image: url(../images/cover-image-light.png);
   --decorative-element-border: 1px solid var(--section-title-color);
   --display-decorative-element: none;
@@ -22,6 +23,7 @@
     --text-color: rgba(53, 52, 48, 1);
     --accent-color: rgba(255, 141, 203, 1);
     --section-title-color: rgba(53, 52, 48, 1);
+    --bg-color: rgba(241, 178, 206, 1);
     --bg-image: url(../images/cover-image-light.png);
     --decorative-element-border: 1px solid var(--section-title-color);
     --display-decorative-element: none;
